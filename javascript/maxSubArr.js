@@ -15,3 +15,4 @@ function maxSubArr(arr, num){
 }
 
 maxSubArr([1,1,1,1,4], 3);
+// returns 6 because 4+1+1 = 6 
