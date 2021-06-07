@@ -18,4 +18,4 @@ function sumZero (arr){
 }
 
 
-sumZero([-2,-1,0,1])
+sumZero([-2,-1,0,1,2])
