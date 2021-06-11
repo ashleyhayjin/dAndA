@@ -14,3 +14,7 @@ function factorialRe(num){
 }
 
 factorialRe(50)
+
+// you need a base case
+//  max base
+// make sure to return in recursion
