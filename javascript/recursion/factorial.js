@@ -6,6 +6,11 @@ function factorial(num){
     return total;
 }
 
-function factorial(num){
-    
+factorial(50);
+
+function factorialRe(num){
+    if(num === 1) return 1;
+    return num * factorialRe(num-1);
 }
+
+factorialRe(50)
