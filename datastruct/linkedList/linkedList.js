@@ -3,3 +3,13 @@
 // Head is beginning, Tail is the end. You also keep track of the length, not what is in the middle
 // one node points to the next one, a skyscraper with no elevators. It cannot take you to the certain floor, you have to take the stairs 
 // singly linked lists, each node only connects to one node, next to each other.
+
+
+class Node {
+    constructor(val){
+        this.val = val;
+        this.next = null;
+    }
+}
+
+var first = new Node("Hi");
