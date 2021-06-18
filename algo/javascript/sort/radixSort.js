@@ -38,3 +38,5 @@ function radixSort(nums){
 }
 
 radixSort([1,11,1111,1111])
+
+// big o of radix sort - 
