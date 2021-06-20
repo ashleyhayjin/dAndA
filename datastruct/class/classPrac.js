@@ -32,3 +32,6 @@ console.log(ashley.fullName());
 
 // constructor methods 
 // instance vs static
+// static is a class method. you call it not on an instance, but on a whole class in OOP
+
+
