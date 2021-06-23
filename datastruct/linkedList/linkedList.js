@@ -88,6 +88,12 @@ class SinglyLinkedList{
         }
         return false;
     }
+    insert(index, val){
+        if(index < 0 || index > this.length) return false;
+        if(index === this.length) return this.push(val);
+        if(index === 0) return this.unshift(val);
+        var prev = this.get(index -1);
+    }
 }
 
 var list = new SinglyLinkedList()
