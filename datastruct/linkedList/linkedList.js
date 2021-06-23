@@ -84,3 +84,6 @@ class SinglyLinkedList{
 
 var list = new SinglyLinkedList()
 list.push("Hi");
+list.push("Bye");
+list.push("Today");
+list.push("Yesterday");
