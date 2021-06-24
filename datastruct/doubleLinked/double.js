@@ -86,5 +86,19 @@ class DoublyLinkedList {
         }
         return current;
     }
+    set(index, val){
+        var foundNode = this.get(index);
+        if(foundNode != null){
+            foundNode.val = val;
+            return true;
+        }
+        return false;
+    }
 }
 
+var list = new DoublyLinkedList();
+list.push("Harry");
+list.push("Phil");
+list.push("Jerry");
+
+console.log(list);
