@@ -7,6 +7,7 @@ class Node {
         this.next = null;
     }
 }
+// if we are adding to the end, it is not constant time. 
 class Stack {
     constructor(){
         this.first = null;
@@ -36,3 +37,9 @@ class Stack {
         return temp.value;
     }
 }
+
+// BIG O of Stacks
+// Insertion = O(1)
+// Removal = O(1)
+// Searching = O(N)
+// Access = O(N)
