@@ -41,3 +41,6 @@ class Queue {
 }
 
 // adding to the end
+// big O of queues
+// insertion O(1)
+// Removal O(1)
