@@ -1,32 +1,34 @@
-// LIFO
-// Last in first out
+// add and remove data 
+// FIFO Data structures 
+// First in first out
 
 class Node {
-    constructor(val){
+    constructor(value){
         this.value = value;
         this.next = null;
     }
 }
-// if we are adding to the end, it is not constant time. 
-class Stack {
+
+class Queue {
     constructor(){
         this.first = null;
         this.last = null;
         this.size = 0;
     }
-    push(val){
+    // add
+    enqueue(val){
         var newNode = new Node(val);
         if(!this.first){
             this.first = newNode;
             this.last = newNode;
-        } else{
-            var temp = this.first;
-            this.first = newNode;
-            this.first.next = temp;
+        } else {
+            this.last.next = newNode;
+            this.last = newNode;
         }
         return ++this.size;
     }
-    pop(){
+    // remove
+    dequeue(){
         if(!this.first) return null;
         var temp = this.first;
         if(this.first === this.last){
@@ -38,8 +40,4 @@ class Stack {
     }
 }
 
-// BIG O of Stacks
-// Insertion = O(1)
-// Removal = O(1)
-// Searching = O(N)
-// Access = O(N)
+// adding to the end
