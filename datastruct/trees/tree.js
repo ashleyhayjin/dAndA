@@ -10,11 +10,7 @@
 // 0,1,2 trees per node
 // everything to the left of the parent has to be less
 
-class BinarySearchTree{
-    constructor(){
-        this.root = null;
-    }
-}
+
 
 class Node {
     constructor(value){
@@ -24,7 +20,25 @@ class Node {
     }
 }
 
-var tree = new BinarySearchTree();
-tree.root = new Node(10);
-tree.root.right = new Node(15);
-tree.root.lef
+class BinarySearchTree{
+    constructor(){
+        this.root = null;
+    }
+    insert(value){
+        var newNode = new Node(value);
+        if(this.root === null){
+            this.root = newNode;
+            return this;
+        } else {
+           var current = this.root;
+            
+        }
+    }
+}
+
+
+
+// var tree = new BinarySearchTree();
+// tree.root = new Node(10);
+// tree.root.right = new Node(15);
+// tree.root.lef
