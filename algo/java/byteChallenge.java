@@ -21,7 +21,9 @@ public class byteChallenge {
               remainderIs = false;
         }
         System.out.println(remainderIs);
-
+        if(remainderIs == false){
+            System.out.println("Got some remainder");
+        }
     }
 }
 
