@@ -13,6 +13,8 @@ class Node {
 }
 
 var first = new Node("Hi");
+// '1,2,3,4,5,6; 3\n3,4,5,8; 3\n'
+// [3,1,2,4,5,6];
 
 class SinglyLinkedList{
     constructor(){
@@ -22,9 +24,11 @@ class SinglyLinkedList{
     }
     push(val){
         var newNode = new Node(val);
+        // if there is no head then make the head equal to the newNode that you just created because that means your linked list is empty. 
         if(!this.head){
             this.head = newNode;
             this.tail = this.head;
+            // if you have a head then you'll make your tail equal to your new Node and you'll make
         } else {
             this.tail.next = newNode;
             this.tail = newNode;

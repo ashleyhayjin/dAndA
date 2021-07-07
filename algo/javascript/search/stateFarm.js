@@ -53,8 +53,7 @@ for(let i = 0; i <datarows1.length; i++) {
 		for (let n=0; n<columns.length; n++) {
 			if (columns[n] === datasetobj2.columnNames[0]) {
 				datasetobj1.yearIndex = n
-            } else 
-            // if (columns[n] === datasetobj2.columnNames[1]) 
+            } else if (columns[n] === datasetobj2.columnNames[1]) 
             {
                 datasetobj1.firesIndex = n
                 console.log(datasetobj1.firesIndex)
@@ -70,12 +69,13 @@ for(let i = 0; i <datarows1.length; i++) {
 }
 
 for ( let year in datasetobj1.yearsToFires) {
+    console.log(year);
     console.log(datasetobj1)
     console.log(datasetobj2)
 	if (!datasetobj2.yearsToFires[year]) {
 	    return false
     }
-    if (datasetobj2.yearsToFire[year]  !== datasetobj1.yearsToFire[year]) {
+    if (datasetobj1.yearsToFires[year]  !== datasetobj2.yearsToFires[year]) {
         return false
     }
 }
@@ -83,7 +83,7 @@ for ( let year in datasetobj1.yearsToFires) {
 return true
 }
 
-let string = "Year Location #_of _Fires Population\n1991 Brazil 36 23456\n1993 Argentina 22 123\n\nYear Total_of_Fires\n1991 25\n1992 12"
-stateFarm(string);
+let string = "Year Location Total_of_Fires Population\n1991 Brazil 25 23456\n1993 Argentina 12 123\n\nYear Total_of_Fires\n1991 25\n1993 12"
+console.log(stateFarm(string));
 
 // console.log(stateFarm("Year Location #_of _Fires Population\n1991 Brazil 36 23456\n1993 Argentina 22 123\n\nYear Total_of_Fires\n1991 36\n1993 22"))
