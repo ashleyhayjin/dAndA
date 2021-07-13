@@ -15,14 +15,16 @@
     //     Make your val set to next  
     //     make your next set to val
     // if there is no next, then that last node is the tail
-        let initalNode = new ListNode(head.val, head.next);
-        let newNode = new ListNode(head.next.val, head.next.next);
-        if(head.next){
-            head.val = head.next.val;
-            head.next.val = initalNode.val;
+        let prevNode = null;
+        let currentNode = new ListNode(head.val, head.next);
+        if(currentNode != null){
+            let nextTemp = currentNode.next;
+            currentNode.next = prevNode;
+            prevNode = currentNode;
+            currentNode = nextTemp
         };
         
-        return head;
+        return prevNode;
         
         // let head = new ListNode(1)
         // return head //{1,2}
